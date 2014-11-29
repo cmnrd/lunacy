@@ -27,18 +27,18 @@
 #include <stddef.h>
 #include <inttypes.h>
 
-namespace lunacy
+namespace Lunacy
 {
+    struct AvrConstants;
+}
 
 /**
  * A simple structure used to organize constants specified by the AVR ISA.
  */
-struct AvrConstants
+struct Lunacy::AvrConstants
 {
   /// base address of the memory region reserved for I/O Registers
   static const size_t iommBase = 0x20; 
   /// upper bound of the memory region reserved for I/O Registers
   static const size_t iommTop  = 0x5f;
 };
-
-} // namespace lunacy 

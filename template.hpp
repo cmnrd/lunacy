@@ -24,7 +24,7 @@
 
 #pragma once
 
-namespace lunacy
+namespace Lunacy
 {
 
-} // namespace lunacy
+}

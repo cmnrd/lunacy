@@ -28,8 +28,10 @@
 #include <avr/avrconstants.hpp>
 #include <inline.hpp>
 
-namespace lunacy
+namespace Lunacy
 {
+    template<typename, size_t> class IOMMPtr;
+}
 
 /**
  * A static pointer that provides read and write access to the I/O Memory Space.
@@ -41,7 +43,7 @@ namespace lunacy
  *      write and read access.
  */
 template<typename T, size_t addr>
-class IOMMPtr
+class Lunacy::IOMMPtr
 {
 private:
   using PtrType = volatile T*;
@@ -56,5 +58,3 @@ public:
                 addr + sizeof(T) < AvrConstants::iommTop,
                 "IOMMPtr points to region outside of I/O memory!");
 };
-
-} // namespace lunacy
