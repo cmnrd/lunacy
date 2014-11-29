@@ -1,4 +1,4 @@
 lunacy
 ======
 
-A C++ template metaprogramming library and collection of examples. No guarantee for correctness and your mental health.
+The goal for this project is to create an efficient C++11 library for the AVR ATmega series.
