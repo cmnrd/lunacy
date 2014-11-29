@@ -78,6 +78,12 @@ project "iomm"
   targetname (project().name .. ".elf")
   postbuildcommands { "avr-objcopy -O ihex bin/" .. project().name .. ".elf bin/"  .. project().name .. ".hex"}
   postbuildcommands { "avr-size bin/" .. project().name .. ".elf"}
+  
+project "typelist"
+  files { "test/mpl/typelist.cpp" }
+  targetname (project().name .. ".elf")
+  postbuildcommands { "avr-objcopy -O ihex bin/" .. project().name .. ".elf bin/"  .. project().name .. ".hex"}
+  postbuildcommands { "avr-size bin/" .. project().name .. ".elf"}
 
 -- Add new projects here
 
